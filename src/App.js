@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Carousel from './components/Carousel/Carousel'
+import './App.scss'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='section-title' >4 Slides with infinite</div>
+      <Carousel slides={4} infinite="true" />
+      <div className='section-title' >10 Slides without infinite</div>
+      <Carousel slides={10} infinite="false" />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
